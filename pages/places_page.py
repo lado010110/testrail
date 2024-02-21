@@ -1,0 +1,21 @@
+from selenium.webdriver.common.by import By
+
+from elements.button import Button
+from pages.base_form import BaseForm
+
+
+class PlacesPage(BaseForm):
+    __imereti_element = Button(By.XPATH, "//strong[contains(text(),'იმერეთი')]", "იმერეთზე დაკლიკება")
+    __imereti = Button(By.XPATH,
+                       "//div[@class='PopularDestinations_PopularDestinations__Cards__PT4Ke']//article[2]//a[1]//figure[1]",
+                       "იმერეთზე დაკლიკება")
+
+    def __init__(self):
+        super().__init__(By.XPATH, "//h1[contains(text(),'ადგილმდებარეობები საქართველოში')]",
+                         "ადგილების გვერდზე შესვლა")
+
+    def scroll_down_to_imereti(self):
+        self.__imereti_element.move_to_element()
+
+    def click_imereti(self):
+        self.__imereti.click()
