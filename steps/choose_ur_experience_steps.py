@@ -32,4 +32,4 @@ class ChooseUrExperienceSteps:
         choose_page.click_category()
         choose_page.click_art_cult()
         choose_page.click_search()
-        time.sleep(4)
+        time.sleep(10)

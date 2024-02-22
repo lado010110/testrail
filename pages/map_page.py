@@ -3,10 +3,9 @@ from selenium.webdriver.common.by import By
 from elements.button import Button
 from elements.element import Element
 from pages.base_form import BaseForm
-from utils.DriverUtils import DriverUtils
 
 
-class ImeretiPage(BaseForm):
+class MapPage(BaseForm):
     __map = Element(By.XPATH, "//div[@class='InterestsMapCore_InterestsMapCore__IREcV']", "იმერეთის რუკა")
     __map_screenshot = Element(By.XPATH, "//div[@class='InterestsMapCore_InterestsMapCore__IREcV']", "რუკა სქრინშოთი")
     __more_toggle_places = Button(By.XPATH, "//button[@data-test='map_toggle-0']", "მდებარეობის მენიუ")
@@ -17,16 +16,11 @@ class ImeretiPage(BaseForm):
                                   "კულტურული ძეგელების მენიუ")
     __castle = Button(By.XPATH, "//label[contains(text(),'ციხესიმაგრეები')]", "ციხესიმაგრები")
     __move_to_airports = Element(By.XPATH, "//label[@data-test='map_checkbox-1']", "აეროპორტის ელემენტი")
-    __airports = Button(By.XPATH, "//input[@data-test='map_checkbox-1']", "აეროპორტის ჩექბოქსი")
-    __tourist_office = Button(By.XPATH, "//input[@data-test='map_checkbox-2']", "ტურისტული ოფისების ჩექბოქსი")
 
     def __init__(self):
-        super().__init__(By.XPATH, "//div[@class='InterestsMapCore_InterestsMapCore__IREcV']",
-                         "იმერეთის გვერდზე შესვლა")
+        super().__init__(By.XPATH, "//button[@data-test='map_toggle-0']", "მაპის გვერდზე შესვლა")
 
     def move_to_map(self):
-        locator = By.XPATH, self.__map.locator
-        DriverUtils.wait_for_clickable(locator)
         self.__map.move_to_element()
 
     def screenshot_map(self):
@@ -53,8 +47,3 @@ class ImeretiPage(BaseForm):
     def move_to_element(self):
         self.__move_to_airports.move_to_element()
 
-    def click_airports(self):
-        self.__airports.click()
-
-    def click_tourist(self):
-        self.__tourist_office.click()
