@@ -8,7 +8,7 @@ from utils.DriverUtils import DriverUtils
 class PlacesPage(BaseForm):
     __imereti_element = Button(By.XPATH, "//strong[contains(text(),'იმერეთი')]", "იმერეთზე დაკლიკება")
     __imereti = Button(By.XPATH,
-                       "//div[@class='PopularDestinations_PopularDestinations__Cards__PT4Ke']//article[2]//a[1]//figure[1]",
+                       "//div[@class='PopularDestinations_PopularDestinations__Cards__PT4Ke']//article[2]",
                        "იმერეთზე დაკლიკება")
 
     def __init__(self):

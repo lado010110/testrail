@@ -47,3 +47,4 @@ class DriverUtils:
     def scroll_up(pixels=400):
         script = "window.scrollBy(0, -arguments[0]);"
         DriverManager.get_driver().execute_script(script, pixels)
+
