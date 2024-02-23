@@ -48,3 +48,8 @@ class DriverUtils:
         script = "window.scrollBy(0, -arguments[0]);"
         DriverManager.get_driver().execute_script(script, pixels)
 
+    @staticmethod
+    def scroll_down(pixels=200):
+        script = "window.scrollBy(0, arguments[0]);"
+        DriverManager.get_driver().execute_script(script, pixels)
+
