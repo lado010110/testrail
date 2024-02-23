@@ -23,7 +23,7 @@ class MainPage(BaseForm):
     def click_places_button(self):
         locator = By.XPATH, self.__places.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__places.click()
+        self.__places.move_to_element()
 
     def close_ri_line(self):
         locator = By.XPATH, self.__close_ri_line.locator
