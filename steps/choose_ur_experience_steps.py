@@ -24,6 +24,7 @@ class ChooseUrExperienceSteps:
         choose_page.click_statue()
         choose_page.click_search()
         choose_page.click_show_more()
+        choose_page.move_to_statue_cate_castles()
         time.sleep(4)
         choose_page.click_statue_cate_castles()
         time.sleep(4)

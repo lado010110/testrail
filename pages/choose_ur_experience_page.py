@@ -48,6 +48,11 @@ class ChooseUrExperiencePage(BaseForm):
         DriverUtils.wait_for_clickable(locator)
         self.__statues_cate_castles.click()
 
+    def move_to_statue_cate_castles(self):
+        locator = By.XPATH, self.__statues_cate_castles.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__statues_cate_castles.move_to_element()
+
     def click_statue_cate_alc(self):
         locator = By.XPATH, self.__statues_cate_alc.locator
         DriverUtils.wait_for_clickable(locator)
