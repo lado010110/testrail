@@ -23,6 +23,8 @@ class ChooseUrExperiencePage(BaseForm):
                          "შექმენიშენი თავგადავლის გვერდზე შესვლა")
 
     def click_search(self):
+        locator = By.XPATH, self.__search.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__search.click()
 
     def click_show_more(self):
@@ -31,22 +33,36 @@ class ChooseUrExperiencePage(BaseForm):
         self.__show_more.click()
 
     def click_category(self):
+        locator = By.XPATH, self.__category.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__category.click()
 
     def click_statue(self):
+        locator = By.XPATH, self.__statues.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__statues.click()
 
     def click_statue_cate_castles(self):
+        locator = By.XPATH, self.__statues_cate_castles.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__statues_cate_castles.click()
 
     def click_statue_cate_alc(self):
+        locator = By.XPATH, self.__statues_cate_alc.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__statues_cate_alc.click()
 
     def click_statue_cate_history(self):
+        locator = By.XPATH, self.__statues_cate_history.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__statues_cate_history.click()
 
     def click_statue_cate_holy(self):
+        locator = By.XPATH, self.__statues_cate_holy.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__statues_cate_holy.click()
 
     def click_art_cult(self):
+        locator = By.XPATH, self.__art_cult.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__art_cult.click()

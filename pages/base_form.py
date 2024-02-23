@@ -11,5 +11,3 @@ class BaseForm:
         locator = self.element.by, self.element.locator
         DriverUtils.wait_for_visible(locator)
         return self.element.is_visible()
-
-

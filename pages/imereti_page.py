@@ -30,31 +30,51 @@ class ImeretiPage(BaseForm):
         self.__map.move_to_element()
 
     def screenshot_map(self):
+        locator = By.XPATH, self.__map_screenshot.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__map_screenshot.screenshot()
 
     def click_more_toggle_places(self):
+        locator = By.XPATH, self.__more_toggle_places.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_places.click()
 
     def click_more_toggle_imereti(self):
+        locator = By.XPATH, self.__more_toggle_imereti.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_imereti.click()
 
     def click_sairme(self):
+        locator = By.XPATH, self.__sairme.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__sairme.click()
 
     def click_more_toggle_sights(self):
+        locator = By.XPATH, self.__more_toggle_sights.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_sights.click()
 
     def click_more_toggle_statue(self):
+        locator = By.XPATH, self.__more_toggle_statue.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_statue.click()
 
     def click_castle(self):
+        locator = By.XPATH, self.__castle.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__castle.click()
 
     def move_to_element(self):
+        locator = By.XPATH, self.__move_to_airports.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__move_to_airports.move_to_element()
 
     def click_airports(self):
+        locator = By.XPATH, self.__airports.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__airports.click()
 
     def click_tourist(self):
+        locator = By.XPATH, self.__tourist_office.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__tourist_office.click()

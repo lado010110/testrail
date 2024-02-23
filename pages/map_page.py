@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from elements.button import Button
 from elements.element import Element
 from pages.base_form import BaseForm
+from utils.DriverUtils import DriverUtils
 
 
 class MapPage(BaseForm):
@@ -21,29 +22,46 @@ class MapPage(BaseForm):
         super().__init__(By.XPATH, "//button[@data-test='map_toggle-0']", "მაპის გვერდზე შესვლა")
 
     def move_to_map(self):
+        locator = By.XPATH, self.__map.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__map.move_to_element()
 
     def screenshot_map(self):
+        locator = By.XPATH, self.__map_screenshot.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__map_screenshot.screenshot()
 
     def click_more_toggle_places(self):
+        locator = By.XPATH, self.__more_toggle_places.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_places.click()
 
     def click_more_toggle_imereti(self):
+        locator = By.XPATH, self.__more_toggle_imereti.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_imereti.click()
 
     def click_sairme(self):
+        locator = By.XPATH, self.__sairme.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__sairme.click()
 
     def click_more_toggle_sights(self):
+        locator = By.XPATH, self.__more_toggle_sights.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_sights.click()
 
     def click_more_toggle_statue(self):
+        locator = By.XPATH, self.__more_toggle_statue.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__more_toggle_statue.click()
 
     def click_castle(self):
+        locator = By.XPATH, self.__castle.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__castle.click()
 
     def move_to_element(self):
+        locator = By.XPATH, self.__move_to_airports.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__move_to_airports.move_to_element()
-

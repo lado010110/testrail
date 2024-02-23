@@ -19,9 +19,13 @@ class SightsPage(BaseForm):
                          "სანახაობების გვერდზე შესვლა")
 
     def click_choose_ur_experience(self):
+        locator = By.XPATH, self.__choose_ur_experience_txt.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__choose_ur_experience_txt.click()
 
     def click_to_chat(self):
+        locator = By.XPATH, self.__chat.locator
+        DriverUtils.wait_for_clickable(locator)
         self.__chat.click()
 
     def click_hart_button(self):
