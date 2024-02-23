@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from elements.button import Button
+from elements.element import Element
 from pages.base_form import BaseForm
 from utils.DriverUtils import DriverUtils
 
@@ -13,10 +14,10 @@ class ChooseUrExperiencePage(BaseForm):
     __statues = Button(By.XPATH, "//div[contains(text(),'კულტურული ძეგლები')]", "კულტურული ძეგლები")
     __art_cult = Button(By.XPATH, "//div[contains(text(),'ხელოვნება და კულტურა')]", "კულტურული ძეგლები")
     __show_more = Button(By.XPATH, "//button[contains(text(),'მეტის ჩატვირთვა')]", "მედის ნახვის ღილაკი")
-    __statues_cate_castles = Button(By.XPATH, "//li[contains(text(),'ციხესიმაგრეები')]", "ციხესიმაგრები")
-    __statues_cate_alc = Button(By.XPATH, "//li[contains(text(),'არქეოლოგიური ძეგლები')]", "არქეოლოგიური ძეგლები")
-    __statues_cate_history = Button(By.XPATH, "//li[contains(text(),'ისტორიული ძეგლები')]", "ისტორიული ძეგლები")
-    __statues_cate_holy = Button(By.XPATH, "//li[contains(text(),'წმინდა ადგილები')]", "წმინდა ადგილები")
+    __statues_cate_castles = Element(By.XPATH, "//li[contains(text(),'ციხესიმაგრეები')]", "ციხესიმაგრები")
+    __statues_cate_alc = Element(By.XPATH, "//li[contains(text(),'არქეოლოგიური ძეგლები')]", "არქეოლოგიური ძეგლები")
+    __statues_cate_history = Element(By.XPATH, "//li[contains(text(),'ისტორიული ძეგლები')]", "ისტორიული ძეგლები")
+    __statues_cate_holy = Element(By.XPATH, "//li[contains(text(),'წმინდა ადგილები')]", "წმინდა ადგილები")
 
     def __init__(self):
         super().__init__(By.XPATH, "//p[contains(text(),'აღმოაჩინე შენთვის სასურველი სანახაობა მთელი საქართ')]",
