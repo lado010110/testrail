@@ -9,7 +9,7 @@ class PlacesMapSteps:
     @staticmethod
     def places_map():
         main_page = MainPage()
-        time.sleep(4)
+        main_page.close_ri_line()
         main_page.click_places_button()
         places_page = PlacesPage()
         places_page.is_visible()
