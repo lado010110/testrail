@@ -1,3 +1,5 @@
+import os
+from datetime import datetime
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 
@@ -59,7 +61,20 @@ class Element:
         LoggerUtils.info("move to element: {}".format(self.name))
         ActionChains(DriverManager.get_driver()).move_to_element(self.find_element()).perform()
 
+    # def screenshot(self):
+    #     LoggerUtils.info("screenshot: {}".format(self.name))
+    #     filepath = r"../resources/photos/screenshot_{}.png".format(self.name)
+    #     return DriverManager.get_driver().find_element(self.by, self.locator).screenshot(filepath)
+
     def screenshot(self):
-        LoggerUtils.info("screenshot: {}".format(self.name))
-        filepath = r"../resources/photos/screenshot_{}.png".format(self.name)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        directory = "../georgiatravel/resources/photos"
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+        filepath = os.path.join(directory, "screenshot_{}_{}.png".format(self.name, timestamp))
+
+        LoggerUtils.info("screenshot: {}".format(filepath))
+
         return DriverManager.get_driver().find_element(self.by, self.locator).screenshot(filepath)
