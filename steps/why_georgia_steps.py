@@ -6,10 +6,12 @@ from utils.DriverUtils import DriverUtils
 class WhyGeorgiaSteps:
     @staticmethod
     def why_georgia_steps():
+        main_page = MainPage()
         why_georgia_page = WhyGeorgiaPage()
         why_georgia_page.click_why_georgia()
         why_georgia_page.is_visible()
         why_georgia_page.click_left_bar_1()
+        main_page.close_ri_line()
         why_georgia_page.click_main_cities()
         why_georgia_page.click_batumi()
         why_georgia_page.batumi_is_visible()
