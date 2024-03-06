@@ -5,7 +5,7 @@ from pages.base_form import BaseForm
 from utils.DriverUtils import DriverUtils
 
 
-class PlacesPage(BaseForm):
+class WhyGeorgiaPage(BaseForm):
     __menu_why_georgia = Button(By.XPATH, "//a[@data-test='header-menu-რატომსაქართველო']", "რატომ საქართველოს მენიუ")
     __main_cities = Button(By.XPATH, "//div[@class='why_georgia_geography_swiper_next']", "მთავარი ქალაქების სექცია")
     __main_cities_batumi = Button(By.XPATH, "//div[@class='why_georgia_marker adjara_marker']", "ბათუმი")
@@ -65,6 +65,106 @@ class PlacesPage(BaseForm):
         locator = By.XPATH, self.__menu_why_georgia.locator
         DriverUtils.wait_for_clickable(locator)
         self.__menu_why_georgia.click()
+
+    def click_main_cities(self):
+        locator = By.XPATH, self.__main_cities.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__main_cities.click()
+
+    def click_batumi(self):
+        locator = By.XPATH, self.__main_cities_batumi.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__main_cities_batumi.click()
+
+    def click_qutaisi(self):
+        locator = By.XPATH, self.__main_cities_qutaisi.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__main_cities_qutaisi.click()
+
+    def click_tbilisi(self):
+        locator = By.XPATH, self.__main_cities_tbilisi.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__main_cities_tbilisi.click()
+
+    def click_main_cities_learn_more(self):
+        locator = By.XPATH, self.__main_cities_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__main_cities_learn_more.click()
+
+    def click_winter(self):
+        locator = By.XPATH, self.__winter.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__winter.click()
+
+    def click_summer(self):
+        locator = By.XPATH, self.__summer.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__summer.click()
+
+    def click_fall(self):
+        locator = By.XPATH, self.__fall.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__fall.click()
+
+    def click_spring(self):
+        locator = By.XPATH, self.__spring.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__spring.click()
+
+    def click_season_learn_more(self):
+        locator = By.XPATH, self.__season_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__season_learn_more.click()
+
+    def click_wine_learn_more(self):
+        locator = By.XPATH, self.__wine_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__wine_learn_more.click()
+
+    def click_alphabet_learn_more(self):
+        locator = By.XPATH, self.__alphabet_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__alphabet_learn_more.click()
+
+    def click_kitchen_learn_more(self):
+        locator = By.XPATH, self.__kitchen_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__kitchen_learn_more.click()
+
+    def click_music_learn_more(self):
+        locator = By.XPATH, self.__music_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__music_learn_more.click()
+
+    def click_dance_learn_more(self):
+        locator = By.XPATH, self.__dance_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__dance_learn_more.click()
+
+    def click_how_is_georgia(self):
+        locator = By.XPATH, self.__how_is_georgia.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__how_is_georgia.click()
+
+    def click_history_learn_more(self):
+        locator = By.XPATH, self.__history_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__history_learn_more.click()
+
+    def click_civilisation_learn_more(self):
+        locator = By.XPATH, self.__civilisation_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__civilisation_learn_more.click()
+
+    def click_highest_learn_more(self):
+        locator = By.XPATH, self.__highest_learn_more.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__highest_learn_more.click()
+
+    def click_travel_to_georgia(self):
+        locator = By.XPATH, self.__travel_to_georgia.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__travel_to_georgia.click()
 
     def click_left_bar_1(self):
         locator = By.XPATH, self.__left_bar_1.locator
