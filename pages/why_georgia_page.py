@@ -59,7 +59,7 @@ class WhyGeorgiaPage(BaseForm):
 
     def __init__(self):
         super().__init__(By.XPATH, "//div[@class='why_georgia_hero_content']",
-                         "ადგილების გვერდზე შესვლა")
+                         "რატომ საქართველოზე შესვლა")
 
     def click_why_georgia(self):
         locator = By.XPATH, self.__menu_why_georgia.locator
