@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from elements.button import Button
+from elements.element import Element
 from pages.base_form import BaseForm
 from utils.DriverUtils import DriverUtils
 
@@ -56,10 +57,102 @@ class WhyGeorgiaPage(BaseForm):
     __left_bar_10 = Button(By.XPATH, "//span[@data-test='screen_10']", "სექცია 10")
     __left_bar_11 = Button(By.XPATH, "//span[@data-test='screen_11']", "სექცია 11")
     __left_bar_12 = Button(By.XPATH, "//span[@data-test='screen_12']", "სექცია 12")
+    __batumi_visible = Element(By.XPATH, "//h1[contains(text(),'ბათუმი')]", "ბათუმის გვერდზე შესვლა")
+    __qutaisi_visible = Element(By.XPATH, "//h1[contains(text(),'ქუთაისი')]", "ქუთაისის გვერდზე შესვლა")
+    __tbilisi_visible = Element(By.XPATH, "//h1[contains(text(),'თბილისი')]", "თბილისის გვერდზე შესვლა")
+    __geography_visible = Element(By.XPATH, "//h1[contains(text(),'საქართველოს გეოგრაფია')]",
+                                  "საქართველოს გეოგრაფის გვერდზე შესვლა")
+    __seasons_visible = Element(By.XPATH, "//h1[contains(text(),'სეზონურობა საქართველოში')]",
+                                "სეზონურობის გვერდზე შესვლა")
+    __wine_visible = Element(By.XPATH, "//h1[contains(text(),'საქართველო - ღვინის აკვანი')]",
+                             "ღვინის აკვანი გვერდზე შესვლა")
+    __alphabet_visible = Element(By.XPATH, "//h1[contains(text(),'უნიკალური ქართული ანბანი')]",
+                                 "ანბანის გვერდზე შესვლა")
+    __kitchen_visible = Element(By.XPATH, "//h1[contains(text(),'უგემრიელესი ქართული სამზარეულო')]",
+                                "სამზარეულოს გვერდზე შესვლა")
+    __music_visible = Element(By.XPATH, "//h1[contains(text(),'უნიკალური ქართული ფოლკლორი')]",
+                              "ფოლკლორის გვერდზე შესვლა")
+    __dance_visible = Element(By.XPATH, "//h1[contains(text(),'ქართული ცეკვა')]", "ცეკვას გვერდზე შესვლა")
+    __history_visible = Element(By.XPATH, "//h1[contains(text(),'საქართველოს ისტორია')]", "ისტორის გვერდზე შესვლა")
+    __civilisation_visible = Element(By.XPATH, "//h1[contains(text(),'პირველი ევროპული ცივილიზაცია')]",
+                                     "ცივილიზაცის გვერდზე შესვლა")
+    __highest_visible = Element(By.XPATH, "//h1[contains(text(),'ევროპის ყველაზე მაღალი დასახლებული პუნქტი საქართვე')]",
+                                "ევროპის ყველაზე მაღალი დასახლებული პუნქტის გვერდზე შესვლა")
+    __travel_visible = Element(By.XPATH, "//h1[contains(text(),'აღმოაჩინე საქართველო')]", "მთავარ გვერდზე შესვლა")
 
     def __init__(self):
         super().__init__(By.XPATH, "//div[@class='why_georgia_hero_content']",
                          "რატომ საქართველოზე შესვლა")
+
+    def batumi_is_visible(self):
+        locator = By.XPATH, self.__batumi_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__batumi_visible.is_visible()
+
+    def qutaisi_is_visible(self):
+        locator = By.XPATH, self.__qutaisi_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__qutaisi_visible.is_visible()
+
+    def tbilisi_is_visible(self):
+        locator = By.XPATH, self.__tbilisi_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__tbilisi_visible.is_visible()
+
+    def geography_is_visible(self):
+        locator = By.XPATH, self.__geography_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__geography_visible.is_visible()
+
+    def seasons_is_visible(self):
+        locator = By.XPATH, self.__seasons_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__seasons_visible.is_visible()
+
+    def wine_is_visible(self):
+        locator = By.XPATH, self.__wine_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__wine_visible.is_visible()
+
+    def alphabet_is_visible(self):
+        locator = By.XPATH, self.__alphabet_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__alphabet_visible.is_visible()
+
+    def kitchen_is_visible(self):
+        locator = By.XPATH, self.__kitchen_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__kitchen_visible.is_visible()
+
+    def music_is_visible(self):
+        locator = By.XPATH, self.__music_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__music_visible.is_visible()
+
+    def dance_is_visible(self):
+        locator = By.XPATH, self.__dance_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__dance_visible.is_visible()
+
+    def history_is_visible(self):
+        locator = By.XPATH, self.__history_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__history_visible.is_visible()
+
+    def civilisation_is_visible(self):
+        locator = By.XPATH, self.__civilisation_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__civilisation_visible.is_visible()
+
+    def highest_is_visible(self):
+        locator = By.XPATH, self.__highest_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__highest_visible.is_visible()
+
+    def travel_is_visible(self):
+        locator = By.XPATH, self.__travel_visible.locator
+        DriverUtils.wait_for_clickable(locator)
+        self.__travel_visible.is_visible()
 
     def click_why_georgia(self):
         locator = By.XPATH, self.__menu_why_georgia.locator
@@ -91,25 +184,25 @@ class WhyGeorgiaPage(BaseForm):
         DriverUtils.wait_for_clickable(locator)
         self.__main_cities_learn_more.click()
 
-    def click_winter(self):
+    def visible_winter(self):
         locator = By.XPATH, self.__winter.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__winter.click()
+        self.__winter.is_visible()
 
-    def click_summer(self):
+    def visible_summer(self):
         locator = By.XPATH, self.__summer.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__summer.click()
+        self.__summer.is_visible()
 
-    def click_fall(self):
+    def visible_fall(self):
         locator = By.XPATH, self.__fall.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__fall.click()
+        self.__fall.is_visible()
 
-    def click_spring(self):
+    def visible_spring(self):
         locator = By.XPATH, self.__spring.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__spring.click()
+        self.__spring.is_visible()
 
     def click_season_learn_more(self):
         locator = By.XPATH, self.__season_learn_more.locator
