@@ -87,72 +87,72 @@ class WhyGeorgiaPage(BaseForm):
     def batumi_is_visible(self):
         locator = By.XPATH, self.__batumi_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__batumi_visible.is_visible()
+        assert self.__batumi_visible.is_visible(), "ვერშევიდა 'ბათუმის' გვერდზე"
 
     def qutaisi_is_visible(self):
         locator = By.XPATH, self.__qutaisi_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__qutaisi_visible.is_visible()
+        assert self.__qutaisi_visible.is_visible(), "ვერშევიდა 'ქუთაისის' გვერდზე"
 
     def tbilisi_is_visible(self):
         locator = By.XPATH, self.__tbilisi_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__tbilisi_visible.is_visible()
+        assert self.__tbilisi_visible.is_visible(), "ვერშევიდა 'თბილისის' გვერდზე"
 
     def geography_is_visible(self):
         locator = By.XPATH, self.__geography_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__geography_visible.is_visible()
+        assert self.__geography_visible.is_visible(), "ვერშევიდა 'საქართველოს გეოგრაფია' ს გვერდზე"
 
     def seasons_is_visible(self):
         locator = By.XPATH, self.__seasons_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__seasons_visible.is_visible()
+        assert self.__seasons_visible.is_visible(), "ვერშევიდა 'სეზონურობა საქართველოში' ს გვერდზე"
 
     def wine_is_visible(self):
         locator = By.XPATH, self.__wine_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__wine_visible.is_visible()
+        assert self.__wine_visible.is_visible(), "ვერშევიდა 'საქართველო - ღვინის აკვანი' ს გვერდზე"
 
     def alphabet_is_visible(self):
         locator = By.XPATH, self.__alphabet_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__alphabet_visible.is_visible()
+        assert self.__alphabet_visible.is_visible(), "ვერშევიდა 'უნიკალური ქართული ანბანი' ს გვერდზე"
 
     def kitchen_is_visible(self):
         locator = By.XPATH, self.__kitchen_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__kitchen_visible.is_visible()
+        assert self.__kitchen_visible.is_visible(), "ვერშევიდა 'უგემრიელესი ქართული სამზარეულო' ს გვერდზე"
 
     def music_is_visible(self):
         locator = By.XPATH, self.__music_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__music_visible.is_visible()
+        assert self.__music_visible.is_visible(), "ვერშევიდა 'უნიკალური ქართული ფოლკლორი' ს გვერდზე"
 
     def dance_is_visible(self):
         locator = By.XPATH, self.__dance_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__dance_visible.is_visible()
+        assert self.__dance_visible.is_visible(), "ვერშევიდა 'ქართული ცეკვა' ს გვერდზე"
 
     def history_is_visible(self):
         locator = By.XPATH, self.__history_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__history_visible.is_visible()
+        assert self.__history_visible.is_visible(), "ვერშევიდა 'საქართველოს ისტორია' ს გვერდზე"
 
     def civilisation_is_visible(self):
         locator = By.XPATH, self.__civilisation_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__civilisation_visible.is_visible()
+        assert self.__civilisation_visible.is_visible(), "ვერშევიდა 'პირველი ევროპული ცივილიზაცია' ს გვერდზე"
 
     def highest_is_visible(self):
         locator = By.XPATH, self.__highest_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__highest_visible.is_visible()
+        assert self.__highest_visible.is_visible(), "ვერშევიდა 'მაღალი დასახლებული პუნქტი საქართველოში' ს გვერდზე"
 
     def travel_is_visible(self):
         locator = By.XPATH, self.__travel_visible.locator
         DriverUtils.wait_for_clickable(locator)
-        self.__travel_visible.is_visible()
+        assert self.__travel_visible.is_visible(), "ვერშევიდა 'მთავარი' ს გვერდზე"
 
     def click_why_georgia(self):
         locator = By.XPATH, self.__menu_why_georgia.locator

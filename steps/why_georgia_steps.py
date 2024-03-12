@@ -72,4 +72,3 @@ class WhyGeorgiaSteps:
         why_georgia_page.click_left_bar_12()
         why_georgia_page.click_travel_to_georgia()
         why_georgia_page.travel_is_visible()
-
