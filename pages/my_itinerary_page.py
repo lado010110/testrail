@@ -6,7 +6,7 @@ from utils.DriverUtils import DriverUtils
 
 
 class MyItineraryPage(BaseForm):
-    __activ = Button(By.XPATH, "//a[@data-test='4-დღიანი ჯიპ-ტური: სამცხე ჯავახეთი - აჭარა']", "აჭარა აქტივობა")
+    __activ = Button(By.XPATH, "//a[@data-test='ქეთსკი - თოვლმავლის ტური გოდერძიზე']", "აქტივობა") ##აქტივობები იცვლება საიტზე და შეგიძლია ამელემნტზე შეცვალო აქტიბობა
     __place_tbilisi = Button(By.XPATH, "//a[@data-test='თბილისი']", "თბილისი")
     __tur = Button(By.XPATH, "//a[@data-test='ორდღიანი ტური სვანეთში']", "ტური სვანეთი")
     __sort_activ_menu = Button(By.XPATH, "//button[contains(text(),'აქტივობა')]", "აქტივობის სორტი")

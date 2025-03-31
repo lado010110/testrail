@@ -64,7 +64,7 @@ class WhyGeorgiaPage(BaseForm):
                                   "საქართველოს გეოგრაფის გვერდზე შესვლა")
     __seasons_visible = Element(By.XPATH, "//h1[contains(text(),'სეზონურობა საქართველოში')]",
                                 "სეზონურობის გვერდზე შესვლა")
-    __wine_visible = Element(By.XPATH, "//h1[contains(text(),'საქართველო - ღვინის აკვანი')]",
+    __wine_visible = Element(By.XPATH, "//h1[contains(text(),'საქართველო როგორც ღვინის აკვანი')]",
                              "ღვინის აკვანი გვერდზე შესვლა")
     __alphabet_visible = Element(By.XPATH, "//h1[contains(text(),'უნიკალური ქართული ანბანი')]",
                                  "ანბანის გვერდზე შესვლა")

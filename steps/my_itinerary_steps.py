@@ -1,4 +1,3 @@
-
 import pyautogui
 
 from pages.main_page import MainPage
@@ -28,6 +27,8 @@ class MyItinerarySteps:
         main_page.click_search()
         main_page.fill_search_menu_activiti(activ_name)
         main_page.click_search()
+        search_page.is_visible()
+        itinerary_page.click_sort_menu_activ()
         search_page.is_visible()
         itinerary_page.click_activ()
         sights_page.click_hart_button()
