@@ -61,10 +61,6 @@ class Element:
         LoggerUtils.info("move to element: {}".format(self.name))
         ActionChains(DriverManager.get_driver()).move_to_element(self.find_element()).perform()
 
-    # def screenshot(self):
-    #     LoggerUtils.info("screenshot: {}".format(self.name))
-    #     filepath = r"../resources/photos/screenshot_{}.png".format(self.name)
-    #     return DriverManager.get_driver().find_element(self.by, self.locator).screenshot(filepath)
 
     def screenshot(self):
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
